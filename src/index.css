@@ -1,13 +1,87 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  height: 100vh;
+}
+
+.app-warm {
+  background-image: url("assets/warm-photo.jpg");
+  background-size: cover;
+  transition: background-image 0.3s ease-in;
+}
+
+.app-cold {
+  background-image: url("assets/cold-photo.jpg");
+  background-size: cover;
+  transition: background-image 0.3s ease-in;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search {
+  text-align: center;
+}
+
+.searchbar-focused {
+  font-size: 2rem;
+  margin-top: 1rem;
+  border-radius: 0.8rem;
+  background-color: rgb(126, 189, 245);
+  border: 2px solid rgb(167, 203, 235);
+}
+
+.searchbar-blur {
+  font-size: 2rem;
+  margin-top: 1rem;
+  border-radius: 0.8rem;
+  background-color: rgb(241, 179, 179);
+  border: 2px solid red;
+}
+
+.searchbar::placeholder {
+  color: rgb(231, 223, 223);
+  font-size: 1.3rem;
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  transform: translate(-50%, -50%);
+}
+
+.fulldate {
+  text-align: center;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+.temperature {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  background-color: rgba(48, 142, 170, 0.5);
+  padding: 3rem 3rem;
+  opacity: 0.6;
+  border-radius: 1rem;
+  font-size: 2rem;
+}
+
+.error-message {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: red;
+  letter-spacing: -0.02rem;
 }
